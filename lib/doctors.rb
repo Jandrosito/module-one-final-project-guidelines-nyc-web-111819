@@ -1,4 +1,4 @@
 class Doctor < ActiveRecord::Base
-    has_many :appointment
-    has_many :patient, through: :appointment
+    has_many :appointments
+    has_many :patients, through: :appointments
 end
