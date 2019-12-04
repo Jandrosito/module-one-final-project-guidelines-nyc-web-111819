@@ -14,5 +14,5 @@ end
 end
 
 20.times do 
-    Appointment.create(patient_id: Patient.all.sample.id, doctor_id: Doctor.all.sample.id)
+    Appointment.create(patient_id: Patient.all.sample.id, doctor_id: Doctor.all.sample.id, time_stamp: DateTime.now)
 end 
