@@ -5,12 +5,14 @@ Patient.destroy_all
 Doctor.destroy_all
 Appointment.destroy_all
 
+specialties = ["dermatologists", "orthodontist", "cardiologist", "neurologist"]
+
 10.times do 
     Patient.create(name: Faker::FunnyName.name) 
 end 
 
 10.times do
-    Doctor.create(name: Faker::FunnyName.name, location: Faker::Address.city)
+    Doctor.create(name: Faker::FunnyName.name, location: Faker::Address.city, specialty: specialties.sample )
 end
 
 20.times do 
